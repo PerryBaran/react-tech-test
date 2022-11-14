@@ -1,6 +1,33 @@
-# Getting Started with Create React App
+# React Technical Test
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A react technical test to create a search engine that requests data from NASA's image API and displays it using react.
+
+Completed as part of the Manchester Codes fast-track bootcamp.
+
+App built in React, tested with Jest and React-Testing-Library.
+
+![desktop view](./public/images/nasa-desktop.png)
+
+![mobile view](./public/images/nase-mobile.png)
+
+## [Live Preview](https://perrybaran.github.io/react-tech-test/)
+
+## Dependencies
+
+1. [react](https://reactjs.org/)
+2. [axios](https://www.npmjs.com/package/axios)
+3. [prop-types](https://www.npmjs.com/package/prop-types)
+
+### Dev Dependencies
+
+1. [prettier](https://prettier.io/)
+2. [gh-pages](https://www.npmjs.com/package/gh-pages)
+
+## Setup
+
+### `npm i`
+
+Install all dependencies.
 
 ## Available Scripts
 
@@ -39,32 +66,25 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+### `npm run prettier`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Runs prettier on all files to format code.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### `npm run pre-deploy`
 
-### Code Splitting
+helps to bundle the react app. \
+This command is run automatically when running deploy.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### `npm run deploy`
 
-### Analyzing the Bundle Size
+Generates a production build of the app and deploys it to GitHub pages.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## What I would add if I had more time
 
-### Making a Progressive Web App
+- Add error handling on API requests
+- test getImages - mock axios
+- test Search input functionality - mock getImages
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Attribution
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Created by **Perry Baran**
