@@ -1,14 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SearchResults snapshot 1`] = `
+exports[`SearchResults empty searchResults array snapshot 1`] = `
 <DocumentFragment>
   <p>
-    Search Results
+    No results
   </p>
-  <img
-    alt="search result"
-    class="card-image"
-    src="https://images.unsplash.com/photo-1522030299830-16b8d3d049fe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
-  />
+</DocumentFragment>
+`;
+
+exports[`SearchResults with non-empty searchResults array snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="card-container"
+  >
+    <img
+      alt="search result"
+      class="card-image"
+      src="1"
+    />
+    <img
+      alt="search result"
+      class="card-image"
+      src="2"
+    />
+  </div>
 </DocumentFragment>
 `;

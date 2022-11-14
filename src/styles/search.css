@@ -13,7 +13,7 @@
   box-sizing: border-box;
   width: calc(100% - 60px);
   padding: 0 10px;
-  font-size: min(2rem, 2vw);
+  font-size: 2rem;
 }
 
 .search-submit {

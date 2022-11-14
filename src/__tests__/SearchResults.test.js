@@ -2,17 +2,38 @@ import { render, screen } from "@testing-library/react";
 import SearchResults from "../components/SearchResults";
 
 describe("SearchResults", () => {
-  const searchResults = [""];
+  describe("with non-empty searchResults array", () => {
+    const searchResults = ["1", "2"];
 
-  test("snapshot", () => {
-    const { asFragment } = render(<SearchResults searchResults={searchResults}/>);
-    expect(asFragment()).toMatchSnapshot();
-  })
+    test("snapshot", () => {
+      const { asFragment } = render(<SearchResults results={searchResults}/>);
+      expect(asFragment()).toMatchSnapshot();
+    })
 
-  test("renders correctly", () => {
-    render(<SearchResults searchResults={searchResults}/>);
-    const image = screen.getByRole("img");
-    
-    expect(image).toHaveAttribute("alt", "search result");
+    test("renders correctly", () => {
+      render(<SearchResults results={searchResults}/>);
+      const images = screen.getAllByRole("img");
+
+      images.forEach((image, i) => {
+        expect(image).toHaveAttribute("alt", "search result");
+        expect(image).toHaveAttribute("src", searchResults[i]);
+      });
+    });
+  });
+
+  describe("empty searchResults array", () => {
+    const searchResults = [];
+
+    test("snapshot", () => {
+      const { asFragment } = render(<SearchResults results={searchResults}/>);
+      expect(asFragment()).toMatchSnapshot();
+    })
+
+    test("renders correctly", () => {
+      render(<SearchResults results={searchResults}/>);
+      const text = screen.getByText(/no results/i);
+      
+      expect(text).toBeInTheDocument();
+    });
   });
 });
