@@ -8,7 +8,7 @@ App built in React, tested with Jest and React-Testing-Library.
 
 ![desktop view](./public/images/nasa-desktop.png)
 
-![mobile view](./public/images/nase-mobile.png)
+![mobile view](./public/images/nasa-mobile.png)
 
 ## [Live Preview](https://perrybaran.github.io/react-tech-test/)
 
