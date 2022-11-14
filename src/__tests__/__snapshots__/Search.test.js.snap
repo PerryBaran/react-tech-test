@@ -3,7 +3,7 @@
 exports[`Search snapshot 1`] = `
 <DocumentFragment>
   <input
-    class="search__input"
+    class="search-input"
     type="text"
   />
 </DocumentFragment>

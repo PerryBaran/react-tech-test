@@ -8,7 +8,7 @@ const App = () => {
       <img
         src="https://cdn.cnn.com/cnnnext/dam/assets/200424060716-nasa-worm-logo.jpg"
         alt="NASA logo"
-        className="app__nasa-logo"
+        className="nasa-logo"
       />
       <Search />
     </div>

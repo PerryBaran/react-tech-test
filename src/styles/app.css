@@ -4,7 +4,8 @@
   align-items: center;
 }
 
-.app__nasa-logo {
-  aspect-ratio: 1;
-  width: 400px;
+.nasa-logo {
+  aspect-ratio: 5 / 3;
+  width: 100%;
+  max-width: 500px;
 }

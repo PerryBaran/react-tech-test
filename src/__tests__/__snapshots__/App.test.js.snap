@@ -7,11 +7,11 @@ exports[`App snapshot 1`] = `
   >
     <img
       alt="NASA logo"
-      class="app__nasa-logo"
+      class="nasa-logo"
       src="https://cdn.cnn.com/cnnnext/dam/assets/200424060716-nasa-worm-logo.jpg"
     />
     <input
-      class="search__input"
+      class="search-input"
       type="text"
     />
   </div>
