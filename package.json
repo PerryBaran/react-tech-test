@@ -1,6 +1,7 @@
 {
   "name": "tech-test",
   "version": "0.1.0",
+  "homepage": "https://perrybaran.github.io/react-tech-test",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -19,7 +20,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prettier": "npx prettier --write ."
+    "prettier": "npx prettier --write .",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -43,5 +46,8 @@
     "transformIgnorePatterns": [
       "\"node_modules/(?!axios)/\""
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
