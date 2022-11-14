@@ -5,12 +5,15 @@ describe("App", () => {
   test("snapshot", () => {
     const { asFragment } = render(<App />);
     expect(asFragment()).toMatchSnapshot();
-  })
+  });
 
   test("renders correctly", () => {
     render(<App />);
     const logo = screen.getByAltText("NASA logo");
-    
-    expect(logo).toHaveAttribute("src", "https://cdn.cnn.com/cnnnext/dam/assets/200424060716-nasa-worm-logo.jpg");
+
+    expect(logo).toHaveAttribute(
+      "src",
+      "https://cdn.cnn.com/cnnnext/dam/assets/200424060716-nasa-worm-logo.jpg"
+    );
   });
 });

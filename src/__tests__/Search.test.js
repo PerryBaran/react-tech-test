@@ -9,22 +9,24 @@ describe("Search", () => {
   });
 
   test("snapshot", () => {
-    const { asFragment } = render(<Search setSearchResults={setSearchResults}/>);
+    const { asFragment } = render(
+      <Search setSearchResults={setSearchResults} />
+    );
     expect(asFragment()).toMatchSnapshot();
   });
 
   test("renders correctly", () => {
-    render(<Search setSearchResults={setSearchResults}/>);
+    render(<Search setSearchResults={setSearchResults} />);
     const input = screen.getByRole("textbox");
     const button = screen.getByRole("button");
-    
+
     expect(input).toBeInTheDocument();
     expect(button).toHaveTextContent("search");
     expect(button).toHaveAttribute("type", "submit");
   });
 
   test("submit button", async () => {
-    render(<Search setSearchResults={setSearchResults}/>);
+    render(<Search setSearchResults={setSearchResults} />);
     const button = screen.getByRole("button");
 
     expect(setSearchResults).toBeCalledTimes(0);

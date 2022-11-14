@@ -6,12 +6,12 @@ describe("SearchResults", () => {
     const searchResults = ["1", "2"];
 
     test("snapshot", () => {
-      const { asFragment } = render(<SearchResults results={searchResults}/>);
+      const { asFragment } = render(<SearchResults results={searchResults} />);
       expect(asFragment()).toMatchSnapshot();
-    })
+    });
 
     test("renders correctly", () => {
-      render(<SearchResults results={searchResults}/>);
+      render(<SearchResults results={searchResults} />);
       const images = screen.getAllByRole("img");
 
       images.forEach((image, i) => {
@@ -25,14 +25,14 @@ describe("SearchResults", () => {
     const searchResults = [];
 
     test("snapshot", () => {
-      const { asFragment } = render(<SearchResults results={searchResults}/>);
+      const { asFragment } = render(<SearchResults results={searchResults} />);
       expect(asFragment()).toMatchSnapshot();
-    })
+    });
 
     test("renders correctly", () => {
-      render(<SearchResults results={searchResults}/>);
+      render(<SearchResults results={searchResults} />);
       const text = screen.getByText(/no results/i);
-      
+
       expect(text).toBeInTheDocument();
     });
   });

@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import '../styles/search-results.css';
+import React from "react";
+import PropTypes from "prop-types";
+import "../styles/search-results.css";
 
-function SearchResults({results}) {
+function SearchResults({ results }) {
   return (
     <>
       {results && !results.length ? (
@@ -11,13 +11,13 @@ function SearchResults({results}) {
         <div className="card-container">
           {results.map((image) => {
             return (
-              <img 
+              <img
                 className="card-image"
                 src={image}
                 alt="search result"
                 key={image}
               />
-            )
+            );
           })}
         </div>
       )}
@@ -26,9 +26,7 @@ function SearchResults({results}) {
 }
 
 SearchResults.propTypes = {
-  results: PropTypes.arrayOf(
-    PropTypes.string,
-  ),
+  results: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default SearchResults;
