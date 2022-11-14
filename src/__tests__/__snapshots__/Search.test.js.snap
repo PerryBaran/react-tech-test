@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search snapshot 1`] = `
+<DocumentFragment>
+  <input
+    class="search__input"
+    type="text"
+  />
+</DocumentFragment>
+`;
