@@ -1,5 +1,6 @@
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
-import Search from "../components/Search";
+import Search from "../../components/Search";
+import * as getImages from "../../requests/getImages";
 
 describe("Search", () => {
   let setSearchResults;
@@ -25,12 +26,19 @@ describe("Search", () => {
     expect(button).toHaveAttribute("type", "submit");
   });
 
-  test("submit button", async () => {
+  test("search functionality", async () => {
+    const mockReturn = "return";
+    const string = "search";
+    jest.spyOn(getImages, "default").mockResolvedValue(mockReturn);
     render(<Search setSearchResults={setSearchResults} />);
-    const button = screen.getByRole("button");
+    const input = screen.getByRole("textbox");
+    const button = screen.getByRole("button");    
 
-    expect(setSearchResults).toBeCalledTimes(0);
+    expect(getImages.default).toBeCalledTimes(0);
+    expect(setSearchResults).toBeCalledTimes(0)
+    fireEvent.change(input, { target: { value: string } });
     fireEvent.click(button);
-    await waitFor(() => expect(setSearchResults).toBeCalledTimes(1));
+    await waitFor(() => expect(getImages.default).toBeCalledWith(string));
+    await waitFor(() => expect(setSearchResults).toBeCalledWith(mockReturn));
   });
 });

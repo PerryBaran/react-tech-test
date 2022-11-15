@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import SearchResults from "../components/SearchResults";
+import SearchResults from "../../components/SearchResults";
 
 describe("SearchResults", () => {
   describe("with non-empty searchResults array", () => {

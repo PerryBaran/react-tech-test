@@ -81,9 +81,8 @@ Generates a production build of the app and deploys it to GitHub pages.
 
 ## What I would add if I had more time
 
-- Add error handling on API requests
+- Add proper error handling on API requests
 - test getImages - mock axios
-- test Search input functionality - mock getImages
 
 ## Attribution
 
