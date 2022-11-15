@@ -32,10 +32,10 @@ describe("Search", () => {
     jest.spyOn(getImages, "default").mockResolvedValue(mockReturn);
     render(<Search setSearchResults={setSearchResults} />);
     const input = screen.getByRole("textbox");
-    const button = screen.getByRole("button");    
+    const button = screen.getByRole("button");
 
     expect(getImages.default).toBeCalledTimes(0);
-    expect(setSearchResults).toBeCalledTimes(0)
+    expect(setSearchResults).toBeCalledTimes(0);
     fireEvent.change(input, { target: { value: string } });
     fireEvent.click(button);
     await waitFor(() => expect(getImages.default).toBeCalledWith(string));

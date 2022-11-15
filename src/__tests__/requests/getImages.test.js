@@ -10,29 +10,29 @@ describe("getImages", () => {
             data: [
               {
                 media_type: "image",
-              }
+              },
             ],
             links: [
               {
-                href: "link 1"
-              }
-            ]
+                href: "link 1",
+              },
+            ],
           },
           {
             data: [
               {
                 media_type: "image",
-              }
+              },
             ],
             links: [
               {
-                href: "link 2"
-              }
-            ]
-          }
-        ]
-      }
-    }
+                href: "link 2",
+              },
+            ],
+          },
+        ],
+      },
+    },
   };
 
   test("returns empty array if not passed a query", async () => {
